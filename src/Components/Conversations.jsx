@@ -32,7 +32,7 @@ const Conversations = () => {
       })
       .then((res) => {
         dispatch(displayusers(res.data));
-        //console.log("res", res.data);
+        console.log("res", res.data);
       })
       .catch((error) => console.log(error));
   };
