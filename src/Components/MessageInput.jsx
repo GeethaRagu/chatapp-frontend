@@ -32,7 +32,7 @@ const MessageInput = () => {
     if(!messages) return;
     try {
       const response = await fetch(
-        `${apiurl}/message/send/${selectedconversation.element._id}`,
+        `${apiurl}/message/send/${selectedconversation.element ? selectedconversation.element._id: selectedconversation._id}`,
         {
           method: "POST",
           headers: {

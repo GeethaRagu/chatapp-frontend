@@ -19,6 +19,7 @@ const userConversationSlice = createSlice({
     },
     clearConversation : (state) =>{
       state.selectedConversation = null;
+      state.users = [];
     }
   },
 });

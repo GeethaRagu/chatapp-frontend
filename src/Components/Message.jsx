@@ -9,7 +9,7 @@ const Message = ({data}) => {
   );
   const currentuser = useSelector((state) => state.user.currentuser);
   //console.log(currentuser.user._id);
-  const fromMe = data.senderId === currentuser.user._id;
+  const fromMe = data.senderId === currentuser.user ? currentuser.user._id : currentuser.newUser_id;
   const chatClassName = fromMe ? 'chat-end' : 'chat-start';
   const profilePic = fromMe ? currentuser.user.profilepic : (selectedconversation.element ? selectedconversation.element.profilepic : selectedconversation.profilepic);
   const bubbleBgColor = fromMe ? 'bg-blue-500' : "";

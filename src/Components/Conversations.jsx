@@ -71,7 +71,7 @@ const Conversations = () => {
             `}
               onClick={() => setSelectedConversation({ element })}
             >
-              <div className="avatar online">
+              <div className="avatar">
                 <div className="w-5 rounded-full">
                   <img src={element.profilepic} alt="user avatar" />
                 </div>
