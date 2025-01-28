@@ -29,10 +29,14 @@ const Conversations = () => {
       .get(`${apiurl}/user/getusers`, {
         withCredentials: true,
         credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("Token"),
+        },
       })
       .then((res) => {
         dispatch(displayusers(res.data));
-        console.log("res", res.data);
+       // console.log("res", res.data);
       })
       .catch((error) => console.log(error));
   };
