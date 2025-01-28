@@ -21,7 +21,7 @@ const SignUp = () => {
   const { error } = useSelector((state) => state.user);
   const currentuser = useSelector((state) => state.user.currentuser);
 
-  console.log("currentuser", currentuser);
+  //console.log("currentuser", currentuser);
   const apiurl = import.meta.env.VITE_API_URLKEY;
 
   const initialValues = {
