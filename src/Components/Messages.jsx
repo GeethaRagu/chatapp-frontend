@@ -39,6 +39,10 @@ const Messages = () => {
       .get(`${apiurl}/message/${selectedconversation.element ? selectedconversation.element._id : selectedconversation._id}`, {
         withCredentials: true,
         credentials: "include",
+        headers: {
+          "Content-Type": "application/json",
+          token: localStorage.getItem("Token"),
+        },
       })
       .then((res) => {
         //dispatch(displayusers(res.data));

@@ -28,7 +28,7 @@ const MessageInput = () => {
 
   const apiurl = import.meta.env.VITE_API_URLKEY;
   const handleSubmit = async (values, { resetForm }) => {
-    console.log(values);
+    //console.log(values);
     if(!messages) return;
     try {
       const response = await fetch(
@@ -37,6 +37,7 @@ const MessageInput = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            token: localStorage.getItem("Token")
           },
           withCredentials: true,
           credentials: "include",
