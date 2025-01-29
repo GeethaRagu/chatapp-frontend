@@ -68,7 +68,7 @@ const MessageInput = () => {
           <div className="w-full relative">
             <Field
               type="text"
-              className="border text-sm rounded-lg w-full p-2.5 bg-gray-700 border-gray-500 text-white"
+              className="border text-sm rounded-lg w-full p-2.5 bg-gray-700 border-gray-500 text-white focus:bg-slate-50"
               placeholder="Send a Message"
               name="message"
               onChange={formik.handleChange}
